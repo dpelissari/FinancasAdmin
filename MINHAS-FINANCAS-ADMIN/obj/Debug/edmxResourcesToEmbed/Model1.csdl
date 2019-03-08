@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinancasModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Renda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="valor" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="dataRecebimento" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="id_usuario" Type="Int32" />
+    <NavigationProperty Name="Renda1" Relationship="Self.FK_Renda_Renda" FromRole="Renda" ToRole="Renda1" />
+    <NavigationProperty Name="Renda2" Relationship="Self.FK_Renda_Renda" FromRole="Renda1" ToRole="Renda" />
+  </EntityType>
+  <Association Name="FK_Renda_Renda">
+    <End Role="Renda" Type="Self.Renda" Multiplicity="1" />
+    <End Role="Renda1" Type="Self.Renda" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Renda">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Renda1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FinancasEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Renda" EntityType="Self.Renda" />
+    <AssociationSet Name="FK_Renda_Renda" Association="Self.FK_Renda_Renda">
+      <End Role="Renda" EntitySet="Renda" />
+      <End Role="Renda1" EntitySet="Renda" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

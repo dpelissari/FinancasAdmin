@@ -1,0 +1,436 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B7FCC78-3652-4658-87F7-D06ECA76D4AB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MINHAS_FINANCAS_ADMIN</RootNamespace>
+    <AssemblyName>MINHAS-FINANCAS-ADMIN</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\Estilos.css" />
+    <Content Include="assets\css\Reset.css" />
+    <Content Include="assets\css\theme-dark.min.css" />
+    <Content Include="assets\css\theme.min.css" />
+    <Content Include="assets\fonts\feather\feather.min.css" />
+    <Content Include="assets\fonts\feather\fonts\Feather144f.svg" />
+    <Content Include="assets\img\avatars\profiles\avatar-1.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-2.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-3.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-4.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-5.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-6.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-7.jpg" />
+    <Content Include="assets\img\avatars\profiles\avatar-8.jpg" />
+    <Content Include="assets\img\avatars\projects\project-1.jpg" />
+    <Content Include="assets\img\avatars\projects\project-2.jpg" />
+    <Content Include="assets\img\avatars\projects\project-3.jpg" />
+    <Content Include="assets\img\avatars\projects\project-4.jpg" />
+    <Content Include="assets\img\avatars\projects\project-5.jpg" />
+    <Content Include="assets\img\avatars\projects\project-6.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-1.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-2.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-3.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-4.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-5.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-6.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-7.jpg" />
+    <Content Include="assets\img\avatars\teams\team-logo-8.jpg" />
+    <Content Include="assets\img\covers\auth-side-cover.jpg" />
+    <Content Include="assets\img\covers\auth-side-cover2.jpg" />
+    <Content Include="assets\img\covers\auth-side-cover3.jpg" />
+    <Content Include="assets\img\covers\header-cover.jpg" />
+    <Content Include="assets\img\covers\profile-cover-1.jpg" />
+    <Content Include="assets\img\covers\profile-cover-2.jpg" />
+    <Content Include="assets\img\covers\profile-cover-3.jpg" />
+    <Content Include="assets\img\covers\profile-cover-4.jpg" />
+    <Content Include="assets\img\covers\profile-cover-5.jpg" />
+    <Content Include="assets\img\covers\profile-cover-6.jpg" />
+    <Content Include="assets\img\covers\profile-cover-7.jpg" />
+    <Content Include="assets\img\covers\sidebar-cover.jpg" />
+    <Content Include="assets\img\covers\team-cover.jpg" />
+    <Content Include="assets\img\files\file-1.jpg" />
+    <Content Include="assets\img\files\file-2.jpg" />
+    <Content Include="assets\img\files\file-3.jpg" />
+    <Content Include="assets\img\files\file-4.jpg" />
+    <Content Include="assets\img\illustrations\coworking.svg" />
+    <Content Include="assets\img\illustrations\designer-life.svg" />
+    <Content Include="assets\img\illustrations\happiness.svg" />
+    <Content Include="assets\img\illustrations\lost.svg" />
+    <Content Include="assets\img\illustrations\scale.svg" />
+    <Content Include="assets\img\illustrations\sticky.svg" />
+    <Content Include="assets\img\logo.svg" />
+    <Content Include="assets\img\masks\avatar-group-hover-last.svg" />
+    <Content Include="assets\img\masks\avatar-group-hover.svg" />
+    <Content Include="assets\img\masks\avatar-group.svg" />
+    <Content Include="assets\img\masks\avatar-status.svg" />
+    <Content Include="assets\img\masks\icon-status.svg" />
+    <Content Include="assets\img\posts\post-1.jpg" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\theme.min.js" />
+    <Content Include="assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\libs\chart.js\Chart.extension.min.js" />
+    <Content Include="assets\libs\chart.js\dist\Chart.min.js" />
+    <Content Include="assets\libs\dropzone\dist\min\dropzone.min.js" />
+    <Content Include="assets\libs\flatpickr\dist\flatpickr.min.css" />
+    <Content Include="assets\libs\flatpickr\dist\flatpickr.min.js" />
+    <Content Include="assets\libs\highlight.js\styles\vs2015.css" />
+    <Content Include="assets\libs\highlightjs\highlight.pack.min.js" />
+    <Content Include="assets\libs\jquery-mask-plugin\dist\jquery.mask.min.js" />
+    <Content Include="assets\libs\jquery\dist\jquery.min.js" />
+    <Content Include="assets\libs\list.js\dist\list.min.js" />
+    <Content Include="assets\libs\quill\dist\quill.core.css" />
+    <Content Include="assets\libs\quill\dist\quill.min.js" />
+    <Content Include="assets\libs\select2\dist\css\select2.min.css" />
+    <Content Include="assets\libs\select2\dist\js\select2.min.js" />
+    <Content Include="bancoFinancas.sql" />
+    <Content Include="CadastraGasto.aspx" />
+    <Content Include="CadastraRenda.aspx" />
+    <Content Include="CadastraUsuario.aspx" />
+    <Content Include="EmailTemplate.html" />
+    <Content Include="Entrar.aspx" />
+    <Content Include="Entrar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entrar.edmx</DependentUpon>
+      <LastGenOutput>Entrar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entrar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entrar.edmx</DependentUpon>
+      <LastGenOutput>Entrar.cs</LastGenOutput>
+    </Content>
+    <Content Include="Erro.aspx" />
+    <Content Include="MeusGastos.aspx" />
+    <Content Include="GastoMensal.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GastoMensal.edmx</DependentUpon>
+      <LastGenOutput>GastoMensal.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GastoMensal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GastoMensal.edmx</DependentUpon>
+      <LastGenOutput>GastoMensal.cs</LastGenOutput>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="MinhasRendas.aspx" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Renda.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Renda.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="PainelResumo.aspx" />
+    <Content Include="PerfilUsuario.aspx" />
+    <Content Include="RecuperarSenha.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CadastraGasto.aspx.cs">
+      <DependentUpon>CadastraGasto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastraGasto.aspx.designer.cs">
+      <DependentUpon>CadastraGasto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastraRenda.aspx.cs">
+      <DependentUpon>CadastraRenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastraRenda.aspx.designer.cs">
+      <DependentUpon>CadastraRenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastraUsuario.aspx.cs">
+      <DependentUpon>CadastraUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastraUsuario.aspx.designer.cs">
+      <DependentUpon>CadastraUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSenha.cs" />
+    <Compile Include="Entrar.aspx.cs">
+      <DependentUpon>Entrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrar.aspx.designer.cs">
+      <DependentUpon>Entrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entrar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entrar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entrar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entrar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entrar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrar.Master.cs">
+      <DependentUpon>Entrar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrar.Master.designer.cs">
+      <DependentUpon>Entrar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MeusGastos.aspx.cs">
+      <DependentUpon>MeusGastos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MeusGastos.aspx.designer.cs">
+      <DependentUpon>MeusGastos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GastoMensal.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GastoMensal.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GastoMensal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GastoMensal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GastoMensal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GastoMensal.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GastosMensais.cs">
+      <DependentUpon>GastoMensal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MinhasRendas.aspx.cs">
+      <DependentUpon>MinhasRendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MinhasRendas.aspx.designer.cs">
+      <DependentUpon>MinhasRendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilUsuario.aspx.cs">
+      <DependentUpon>PerfilUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilUsuario.aspx.designer.cs">
+      <DependentUpon>PerfilUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarSenha.aspx.cs">
+      <DependentUpon>RecuperarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarSenha.aspx.designer.cs">
+      <DependentUpon>RecuperarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Renda.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Renda.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PainelResumo.aspx.cs">
+      <DependentUpon>PainelResumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PainelResumo.aspx.designer.cs">
+      <DependentUpon>PainelResumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>Entrar.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-medium.eot" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-medium.ttf" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-medium.woff" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-mediumd41d.eot" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-regular.eot" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-regular.ttf" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-regular.woff" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-regulard41d.eot" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-semibold.eot" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-semibold.ttf" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-semibold.woff" />
+    <Content Include="assets\fonts\cerebrisans\cerebrisans-semiboldd41d.eot" />
+    <Content Include="assets\fonts\feather\fonts\Feather144f.ttf" />
+    <Content Include="assets\fonts\feather\fonts\Feather144f.woff" />
+    <Content Include="Entrar.Master" />
+    <EntityDeploy Include="Entrar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Entrar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entrar.edmx.diagram">
+      <DependentUpon>Entrar.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="GastoMensal.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GastoMensal.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="GastoMensal.edmx.diagram">
+      <DependentUpon>GastoMensal.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Renda.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Renda.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Renda.edmx.diagram">
+      <DependentUpon>Renda.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Principal.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50896</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50896/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

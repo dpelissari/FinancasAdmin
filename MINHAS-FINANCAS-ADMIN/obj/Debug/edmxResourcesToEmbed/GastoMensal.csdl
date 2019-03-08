@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinancasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GastosMensais">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="valor" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="dataVencimento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_usuario" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="FinancasEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GastosMensais" EntityType="Self.GastosMensais" />
+  </EntityContainer>
+</Schema>

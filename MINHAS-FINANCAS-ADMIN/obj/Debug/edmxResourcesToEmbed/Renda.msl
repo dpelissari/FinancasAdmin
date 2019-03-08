@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinancasModel1StoreContainer" CdmEntityContainer="FinancasEntities2">
+    <EntitySetMapping Name="Renda">
+      <EntityTypeMapping TypeName="FinancasModel1.Renda">
+        <MappingFragment StoreEntitySet="Renda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="dataRecebimento" ColumnName="dataRecebimento" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
